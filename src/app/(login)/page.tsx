@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
 import { FaUserCircle, FaLock } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [focus, setFocus] = useState({ username: false, password: false });
 
   return (
@@ -38,7 +40,8 @@ export default function Home() {
 
         <a href="#" className="mb-4 block text-right text-sm text-gray-500 hover:text-gray-900">Forgot Password?</a>
 
-        <button className="w-full rounded-lg bg-blue-900 px-4 py-2 text-white transition hover:shadow-lg">Login</button>
+        <button className="w-full rounded-lg bg-blue-900 px-4 py-2 text-white transition hover:shadow-lg"
+        onClick={() => router.push('/dashboard')}>Login</button>
       </div>
     </div>
   );
