@@ -8,7 +8,7 @@ export default function Sidebar() {
   const router = useRouter();
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("hospitalId");
     router.push("/"); // Ensure correct redirection after logout
   };
 
@@ -17,7 +17,6 @@ export default function Sidebar() {
       {/* Sidebar Header */}
       <div className="flex flex-row w-full items-center justify-start mt-4 mb-10">
         <img className="w-25" src="logo.png" alt="logo" />
-        <h1 className="text-xl text-blue-900 font-bold">Sathkara</h1>
       </div>
 
       {/* Navigation Links */}

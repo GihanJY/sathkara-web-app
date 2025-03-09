@@ -37,8 +37,12 @@ export default function Home() {
 
       if (hospitalData.Password === pw) {
         toast.success("Login successful! Redirecting...");
+
+        // Save hospitalId in Local Storage
+      localStorage.setItem("hospitalId", doc.id);
+
         setTimeout(() => {
-          router.push("/dashboard");
+          router.push(`/dashboard`);
         }, 2000);
       } else {
         toast.error("Invalid email or password.");
