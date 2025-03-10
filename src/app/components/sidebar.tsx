@@ -29,13 +29,13 @@ export default function Sidebar() {
           </div>
         </Link>
 
-        {/* Analytics Button */}
+        {/* Analytics Button
         <Link href="/dashboard/analytics">
           <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-300 cursor-pointer">
             <FaChartBar color="black" size={20} />
             <span className="text-black">Analytics</span>
           </div>
-        </Link>
+        </Link> */}
 
         {/* Profile Button */}
         <Link href="/dashboard/profile">
